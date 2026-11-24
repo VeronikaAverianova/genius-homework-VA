@@ -1,0 +1,155 @@
+/* ABOUT
+   Стилі секції «Про нас»
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.about {
+  padding: 56px 20px 52px;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    padding: 0 0 88px;
+  }
+
+  &__container {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__content {
+    max-width: 320px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      max-width: 710px;
+    }
+  }
+
+  &__title {
+    margin: 0 auto 20px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      margin: 0 auto 40px;
+    }
+  }
+
+  &__text {
+    font-size: var(--font-size-h5);
+    line-height: var(--line-height-h5);
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      font-size: var(--font-size-h4);
+      line-height: var(--line-height-h4);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @media screen and (min-width: bp.$bp-desktop) {
+        margin-bottom: 40px;
+      }
+    }
+
+    strong {
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+
+  &__images {
+    display: none;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: flex;
+      position: relative;
+      flex-direction: column;
+      gap: 40px;
+      width: 100%;
+      max-width: 500px;
+    }
+  }
+
+  &__image {
+    width: 327px;
+    height: 327px;
+    object-fit: cover;
+    border-radius: 50%;
+
+    &--before {
+      align-self: flex-start;
+    }
+
+    &--after {
+      align-self: flex-end;
+    }
+  }
+
+  &__star {
+    position: absolute;
+    pointer-events: none;
+    z-index: 1;
+    animation: star-pulse 6s ease-in-out infinite;
+
+    &--first {
+      width: 40px;
+      height: 40px;
+
+      @media screen and (min-width: bp.$bp-desktop) {
+        width: 64px;
+        height: 64px;
+        top: 335px;
+        left: 117px;
+      }
+    }
+
+    &--second {
+      width: 40px;
+      height: 40px;
+      top: 31px;
+      left: 471px;
+    }
+
+    &--third {
+      width: 16px;
+      height: 16px;
+      top: 268px;
+      left: 472px;
+    }
+  }
+
+  &__star-mobile {
+    position: absolute;
+    right: 23px;
+    bottom: -46px;
+    width: 40px;
+    height: 40px;
+    pointer-events: none;
+    animation: star-pulse 6s ease-in-out infinite;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: none;
+    }
+  }
+}
+
+@keyframes star-pulse {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+
+  50% {
+    transform: rotate(180deg) scale(1.15);
+  }
+
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about__star,
+  .about__star-mobile {
+    animation: none;
+  }
+}

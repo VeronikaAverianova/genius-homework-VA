@@ -1,0 +1,161 @@
+/* FOOTER
+   Стилі підвалу сайту, навігації та контактної інформації
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.footer {
+  position: relative;
+  padding: 32px 0 56px;
+  background-color: var(--color-dark-blue);
+  background-image: url('../images/footer-background.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    padding: 56px 0;
+  }
+
+  &::before {
+    display: none;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: block;
+      position: absolute;
+      right: 0;
+      bottom: -65px;
+      width: 270px;
+      height: 215px;
+      background-image: url('../images/footer-decor.png');
+      background-repeat: no-repeat;
+      content: '';
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 32px;
+    }
+  }
+
+  &__logo,
+  &__nav,
+  &__address,
+  &__policy {
+    @media screen and (min-width: bp.$bp-desktop) {
+      flex-grow: 1;
+      flex-basis: 0;
+    }
+  }
+
+  &__logo {
+    display: flex;
+    justify-content: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      justify-content: flex-start;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  &__address {
+    display: none;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+  }
+
+  &__policy {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      align-items: flex-start;
+      gap: 16px;
+    }
+  }
+
+  &__nav-link,
+  &__contact-link,
+  &__policy-link {
+    font-size: 16px;
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.2s;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      font-size: var(--font-size-h6);
+    }
+
+    &:hover {
+      color: var(--color-primary);
+    }
+  }
+
+  &__policy-link {
+    order: 1;
+    text-align: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      order: 0;
+      text-align: left;
+    }
+  }
+
+  &__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    order: 2;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      justify-content: flex-start;
+      gap: 24px;
+      order: 0;
+    }
+  }
+
+  .social-link__icon {
+    fill: var(--color-white);
+  }
+
+  &__copyright {
+    order: 3;
+    font-size: 14px;
+    line-height: 1;
+    color: var(--color-gray);
+    text-align: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      order: 0;
+      font-size: var(--font-size-h7);
+      text-align: left;
+    }
+  }
+}

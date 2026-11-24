@@ -1,0 +1,29 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  transform: translateX(0);
+  transition: transform 0.3s, visibility 0.3s;
+  background-color: var(--color-white);
+  z-index: 10;
+}
+.mobile-menu.is-hidden {
+  transform: translateX(100%);
+  visibility: hidden;
+  pointer-events: none;
+}
+.mobile-menu__close-button {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  background-color: var(--color-dark-blue);
+  -webkit-mask: url("../images/close.svg") center/contain no-repeat;
+          mask: url("../images/close.svg") center/contain no-repeat;
+  border: none;
+  cursor: pointer;
+}/*# sourceMappingURL=mobile-menu.css.map */

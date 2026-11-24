@@ -1,0 +1,18 @@
+/* SECTIONS BACKGROUND
+   Спільний декоративний фон секцій сайту
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.sections-background {
+  background-image: url('../images/mobile-advantages-background.svg');
+  background-size: 360px auto;
+  background-repeat: no-repeat;
+  background-position: center 490px;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    background-image: url('../images/advantages-background.svg');
+    background-position: center 665px;
+    background-size: 1440px auto;
+  }
+}

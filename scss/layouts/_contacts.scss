@@ -1,0 +1,66 @@
+/* CONTACTS
+   Стилі секції контактів, карти та контейнера форми
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.contacts {
+  padding: 20px 0 0;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    padding: 48px 0 96px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    margin-inline: auto;
+    align-items: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      flex-direction: row;
+      max-width: 1059px;
+      gap: 32px;
+      margin: 0 auto;
+      align-items: stretch;
+    }
+  }
+
+  &__map {
+    order: 1;
+    width: 100%;
+    max-width: 360px;
+    height: 232px;
+    border: 0;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      order: 0;
+      width: 100%;
+      max-width: 605px;
+      height: 481px;
+      border-radius: 32px;
+    }
+  }
+
+  &__form-container {
+    width: 100%;
+    max-width: 320px;
+    height: 434px;
+    padding: 42px 24px;
+    background-color: var(--color-dark-blue);
+    background-image: url('../images/contacts-background.png');
+    background-repeat: no-repeat;
+    border-radius: 24px;
+    color: var(--color-white);
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      width: 100%;
+      max-width: 422px;
+      height: 482px;
+      padding: 48px 56px;
+      border-radius: 32px;
+    }
+  }
+}

@@ -1,0 +1,59 @@
+/* PROCEDURES
+   Стилі секції процедур та розташування карток
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.procedures {
+  padding: 20px 0;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    padding: 48px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 16px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__viewport {
+    width: 100%;
+    max-width: 320px;
+    margin-inline: auto;
+    overflow: hidden;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      max-width: none;
+      margin-inline: 0;
+      overflow: visible;
+    }
+  }
+
+  &__item {
+    flex: 0 0 320px;
+    max-width: 100%;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      flex-basis: calc((100% - 32px) / 3);
+    }
+  }
+
+  &__carousel {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__arrow {
+    display: none;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: flex;
+    }
+  }
+}

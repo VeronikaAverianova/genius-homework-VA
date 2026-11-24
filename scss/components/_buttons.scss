@@ -1,0 +1,49 @@
+/* Buttons: базові стилі та стани кнопок */
+
+@use '../utils/breakpoints' as bp;
+
+/* Base button */
+.button {
+  margin-inline: auto;
+  font-family: var(--font-primary);
+  font-size: 16px;
+  font-weight: var(--font-weight-semibold);
+  cursor: pointer;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    margin-inline: 0;
+    font-size: var(--font-size-h5);
+  }
+
+  /* Primary button — Default */
+  &--primary {
+    display: block;
+    padding: 12.5px 24px;
+    width: 186px;
+    white-space: nowrap;
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    border-radius: 24px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: inline-block;
+      padding: 16px 32px;
+      width: auto;
+      border-radius: 32px;
+    }
+
+    /* Primary button — Hover */
+    &:hover:not(:disabled) {
+      color: var(--color-dark-blue);
+      background-color: transparent;
+    }
+  }
+
+  &[disabled] {
+    background-color: var(--color-gray);
+    border-color: var(--color-gray);
+    color: var(--color-white);
+    cursor: not-allowed;
+  }
+}

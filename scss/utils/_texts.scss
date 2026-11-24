@@ -1,0 +1,13 @@
+/* TEXT DECORATION
+   Допоміжні класи для оформлення тексту
+*/
+
+/* Accent text */
+.accent {
+  color: var(--color-primary);
+}
+
+/* Text capitalization */
+.text-capitalize {
+  text-transform: capitalize;
+}

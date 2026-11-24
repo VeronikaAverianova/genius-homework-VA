@@ -1,0 +1,52 @@
+/* CAROUSEL
+   Стилі навігаційних кнопок та пагінації слайдера
+*/
+
+.carousel-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  fill: var(--color-dark-blue);
+  background-color: transparent;
+  backdrop-filter: blur(15.36px);
+  border-radius: 50%;
+  border: 0.77px solid var(--color-dark-blue);
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--color-primary);
+    border: 0.77px solid var(--color-white);
+    fill: var(--color-white);
+  }
+}
+
+.carousel-icon {
+  width: 16px;
+  height: 16px;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+}
+
+.carousel-pagination {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 32px;
+
+  &__dot {
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: var(--color-gray);
+
+    &--active {
+      background-color: var(--color-primary);
+    }
+  }
+}

@@ -1,0 +1,113 @@
+/* HEADER
+   Стилі шапки сайту, навігації та соціальних посилань
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 16px 0;
+  background-color: var(--color-header-bg);
+  z-index: 1;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    padding: 32px 0;
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px 0 20px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      padding: 0;
+      gap: 40px;
+    }
+  }
+
+  .logo__image {
+    display: block;
+    width: 57px;
+    height: 30px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      width: auto;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    display: none;
+    flex-grow: 1;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    justify-content: center;
+    gap: 56px;
+  }
+
+  &__nav-link {
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-dark-blue);
+    text-decoration: none;
+    transition:
+      color 0.3s,
+      font-weight 0.3s;
+
+    &:hover {
+      font-weight: var(--font-weight-bold);
+      color: var(--color-primary);
+    }
+  }
+
+  &__socials {
+    display: none;
+    align-items: center;
+    gap: 32px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: flex;
+    }
+  }
+  .social-link__icon {
+    fill: var(--color-dark-blue);
+    transition: fill 0.3s;
+
+    &:hover {
+      fill: var(--color-primary);
+    }
+  }
+
+  &__menu-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: none;
+    }
+  }
+
+  &__mobile-menu {
+    width: 20px;
+    height: 14px;
+    fill: var(--color-white);
+  }
+}

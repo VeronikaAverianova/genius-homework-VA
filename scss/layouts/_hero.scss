@@ -1,0 +1,93 @@
+/* HERO
+   Стилі головного екрана сайту
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.hero {
+  background-image: url('../images/mobile-hero-doctor.webp');
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    min-height: 644px;
+    padding-top: 120px;
+    background-image: url('../images/hero-doctor.webp');
+    background-size: auto 728px;
+  }
+
+  &__container {
+    padding: 71px 20.5px 70px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      padding: 0;
+      padding-left: 105px;
+    }
+  }
+
+  &__eyebrow {
+    text-align: center;
+    font-size: var(--font-size-h9);
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      margin-bottom: 16px;
+      text-align: left;
+      font-size: var(--font-size-h5);
+    }
+  }
+
+  &__title {
+    max-width: 330px;
+    margin-bottom: 32px;
+    font-family: var(--font-heading);
+    font-size: 54px;
+    font-weight: var(--font-weight-bold);
+    letter-spacing: var(--letter-spacing-default);
+    color: var(--color-primary);
+    line-height: 0.85;
+    text-align: center;
+    white-space: nowrap;
+    transform: translateX(-5.5px);
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      text-align: left;
+      max-width: 529px;
+      margin-bottom: 156px;
+      font-size: 140px;
+      line-height: 0.82;
+      white-space: normal;
+      transform: none;
+    }
+  }
+
+  &__title-break {
+    display: none;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      display: initial;
+    }
+  }
+
+  &__button {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      margin-bottom: 14px;
+    }
+  }
+
+  &__note {
+    margin-inline: auto;
+    max-width: 186px;
+    font-size: 11px;
+    line-height: var(--line-height-h9);
+    color: var(--color-gray-dark);
+    text-align: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      margin-inline: 0;
+      max-width: 238px;
+      font-size: var(--font-size-h9);
+    }
+  }
+}

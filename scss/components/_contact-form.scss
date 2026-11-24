@@ -1,0 +1,119 @@
+/* CONTACT FORM
+   Спільні стилі форм, полів введення та їхніх станів
+*/
+
+@use '../utils/breakpoints' as bp;
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 310px;
+  margin: 0 auto;
+
+  &__title {
+    max-width: 272px;
+    margin-bottom: 24px;
+    font-size: var(--font-size-h3);
+    color: var(--color-white);
+    text-align: center;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      max-width: 274px;
+      margin-bottom: 32px;
+      font-size: var(--font-size-h3);
+      line-height: 26px;
+      font-weight: var(--font-weight-semibold);
+    }
+  }
+
+  &__field {
+    width: 100%;
+    max-width: 310px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      width: 100%;
+      max-width: 310px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__label {
+    display: block;
+  }
+
+  &__input {
+    display: block;
+    width: 241px;
+    max-width: 100%;
+    height: 46px;
+    padding: 16px 39.5px;
+    margin-inline: auto;
+    background-color: transparent;
+    border: 1.5px solid var(--color-gray);
+    border-radius: 24px;
+    font-size: var(--font-size-h7);
+    line-height: var(--line-height-normal);
+    color: var(--color-white);
+    transition: background-color 0.2s;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      width: 100%;
+      height: 52px;
+      padding: 14px 32px;
+      border: 2px solid var(--color-gray);
+      border-radius: 32px;
+    }
+
+    &:focus {
+      background-color: var(--color-gray);
+      outline: none;
+    }
+
+    &::placeholder {
+      font-size: var(--font-size-h7);
+      line-height: var(--line-height-normal);
+      color: var(--color-white);
+    }
+  }
+
+  &__button {
+    width: 241px;
+    max-width: 100%;
+    height: 46px;
+    margin: 0 auto;
+    line-height: var(--line-height-normal);
+    letter-spacing: var(--letter-spacing-default);
+    white-space: nowrap;
+
+    @media screen and (min-width: bp.$bp-desktop) {
+      width: 281px;
+      max-width: 281px;
+      height: 53px;
+      padding: 0 32px;
+    }
+
+    &:hover:not(:disabled) {
+      color: var(--color-white);
+    }
+  }
+
+  &__terms {
+    width: 100%;
+    max-width: 213px;
+    margin-top: 8px;
+    color: var(--color-gray);
+    font-size: var(--font-size-h9);
+    text-align: center;
+  }
+
+  &__terms-link {
+    color: inherit;
+    text-underline-offset: 2px;
+  }
+}
+
+.contact-form--compact .contact-form__field {
+  margin-bottom: 16px;
+}

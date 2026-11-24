@@ -1,0 +1,97 @@
+:root {
+  /* ========================================
+     PRIMARY COLORS
+     Основна палітра відповідно до Figma
+  ======================================== */
+  --color-white: #ffffff;
+  --color-primary: #2b7fff;
+  --color-dark-blue: #011c44;
+
+  /* ========================================
+     SECONDARY COLORS
+     Додаткові кольори дизайн-системи
+  ======================================== */
+  --color-gray-dark: #4a4a4a;
+  --color-gray: #747272;
+  --color-navy: #011f4a;
+  --color-yellow: #ffd02b;
+
+  /* ========================================
+     ADDITIONAL COLORS
+     Світлі відтінки для фонів та елементів
+  ======================================== */
+  --color-blue-light: #d9e9ff;
+  --color-blue-lightest: #f4f8ff;
+
+  /* ========================================
+     SEMANTIC COLORS
+     Кольори за функціональним призначенням
+  ======================================== */
+  --color-text-primary: var(--color-dark-blue);
+  --color-text-secondary: var(--color-gray-dark);
+
+  /* ========================================
+     BACKGROUNDS & OVERLAYS
+     Напівпрозорі фони та затемнення
+  ======================================== */
+  --color-header-bg: rgba(255, 255, 255, 0.25);
+  --color-overlay: rgba(1, 28, 68, 0.45);
+
+  /* ========================================
+     GRADIENTS
+     Кольорові точки градієнтів
+  ======================================== */
+
+  /* Card overlay */
+  --color-card-gradient-start: rgba(1, 28, 68, 0);
+  --color-card-gradient-mid: rgba(1, 28, 68, 0.725825);
+  --color-card-gradient-end: var(--color-dark-blue);
+
+  /* ========================================
+     SHADOWS
+     Тіні відповідно до параметрів Figma
+  ======================================== */
+  --shadow-primary: 0 4px 4px rgba(168, 198, 245, 0.38);
+  --shadow-secondary: 0 4px 4px rgba(168, 198, 245, 0.2);
+  --shadow-card: 0 4px 22px rgba(168, 198, 245, 0.38);
+  --shadow-mobile-menu: -8px 0 28px rgba(168, 198, 245, 0.38);
+
+  /* ========================================
+     TYPOGRAPHY
+     Типографіка відповідно до Figma
+  ======================================== */
+
+  /* Font families */
+  --font-primary: 'Roboto', sans-serif;
+  --font-heading: 'Play', sans-serif;
+
+  /* Font weights */
+  --font-weight-regular: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Font sizes */
+  --font-size-h1: 64px;
+  --font-size-h2: 32px;
+  --font-size-h3: 22px;
+  --font-size-h4: 22px;
+  --font-size-h5: 18px;
+  --font-size-h6: 16px;
+  --font-size-h7: 13px;
+  --font-size-h8: 14px;
+  --font-size-h9: 12px;
+
+  /* Line heights */
+  --line-height-normal: normal;
+  --line-height-h4: 38px;
+  --line-height-h9: 18px;
+
+  /* Letter spacing */
+  --letter-spacing-default: 0;
+
+  /* ========================================
+     MODAL
+     Декоративні ефекти модального вікна
+  ======================================== */
+  --color-modal-pattern: rgba(43, 127, 255, 0.13);
+}

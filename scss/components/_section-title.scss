@@ -1,0 +1,26 @@
+/* ========================================
+   SECTION TITLES
+   Спільні стилі заголовків секцій
+======================================== */
+
+@use '../utils/breakpoints' as bp;
+
+.section-title {
+  font-size: var(--font-size-h2);
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 24px;
+
+  @media screen and (min-width: bp.$bp-desktop) {
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h1);
+    line-height: var(--line-height-normal);
+    margin-bottom: 48px;
+  }
+
+  &--centered {
+    text-align: center;
+  }
+}

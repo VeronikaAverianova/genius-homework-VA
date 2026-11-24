@@ -1,0 +1,65 @@
+/* MODAL
+   Стилі модального вікна та фонового затемнення
+*/
+
+.backdrop {
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(from var(--color-navy) r g b / 40%);
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
+  z-index: 2;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  padding: 42px 142px;
+  position: relative;
+  max-width: 723px;
+  width: 100%;
+  max-height: 681px;
+  height: 100%;
+  background-color: var(--color-dark-blue);
+  border-radius: 48px;
+  background-image: url('../images/modal-background.png');
+  background-repeat: no-repeat;
+  overflow-y: auto;
+  color: var(--color-white);
+
+  &__close-button {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+    background-image: url('../images/close.svg');
+    background-repeat: no-repeat;
+    height: 32px;
+    width: 32px;
+    background-color: transparent;
+    border: none;
+    background-position: center;
+    cursor: pointer;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    font-family: var(--font-heading);
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-normal);
+    color: var(--color-white);
+    text-align: center;
+  }
+}

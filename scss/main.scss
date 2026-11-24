@@ -1,0 +1,27 @@
+@use './utils/fonts';
+
+@use './utils/variables';
+@use 'base';
+
+@use './utils/utils';
+@use './utils/texts';
+
+@use './components/buttons';
+@use './components/section-title';
+@use './components/social-link';
+@use './components/advantage-card';
+@use './components/procedure-card';
+@use './components/carousel';
+@use './components/contact-form';
+
+@use './layouts/container';
+@use './layouts/header';
+@use './layouts/hero';
+@use './layouts/about';
+@use './layouts/advantages';
+@use './layouts/procedures';
+@use './layouts/contacts';
+@use './layouts/footer';
+@use './layouts/modal';
+@use './layouts/sections-background';
+@use './components/mobile-menu';
